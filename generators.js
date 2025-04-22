@@ -8,9 +8,9 @@ function* numberGenerator() {
 }
 
 const gen = numberGenerator()
-console.log(gen.next().value)
-console.log(gen.next().value)
-console.log(gen.next().value)
+console.log(gen.next().value) // 1
+console.log(gen.next().value) // 2
+console.log(gen.next().value) // 3
 console.log(gen.next()) //note: its not done until all 3 yields have been called
 
 // Since generators implement the iterable protocol, you can loop over them:
@@ -29,8 +29,8 @@ function* twoWayGenerator() {
 }
 
 const twoWayGen = twoWayGenerator()
-console.log(twoWayGen.next().value)
-console.log(twoWayGen.next('Alice').value)
+console.log(twoWayGen.next().value) // What's your name?
+console.log(twoWayGen.next('Alice').value) // Hello, Alice!
 
 // infinite sequences
 function* infiniteCounter() {
@@ -39,6 +39,6 @@ function* infiniteCounter() {
 }
 
 const counter = infiniteCounter()
-console.log(counter.next().value)
-console.log(counter.next().value)
-console.log(counter.next().value)
+console.log(counter.next().value) // 0
+console.log(counter.next().value) // 1
+console.log(counter.next().value) // 2
