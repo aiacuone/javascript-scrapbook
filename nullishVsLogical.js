@@ -9,3 +9,9 @@ console.log(zero ?? 'fallback') // Output: 0 (0 is not null or undefined)
 const emptyString = ''
 console.log(emptyString || 'fallback') // Output: "fallback" (empty string is falsy)
 console.log(emptyString ?? 'fallback') // Output: "" (empty string is not null or undefined)
+
+
+// The key difference lies in how they treat "falsy" values.
+
+// || (Logical OR): Returns the right-hand operand if the left-hand operand is any falsy value (e.g., false, 0, "", NaN, null, undefined).
+// ?? (Nullish Coalescing): Returns the right-hand operand only if the left-hand operand is strictly null or undefined.
